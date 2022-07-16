@@ -1,0 +1,10 @@
+FROM java
+
+RUN mkdir /app
+
+COPY ./build/libs/gh-language-color-api-0.0.1-all.jar /gh-language-color-api/gh-language-color-api-0.0.1-all.jar
+WORKDIR /gh-language-color-api
+
+CMD ["java", "-jar", "gh-language-color-api-0.0.1-all.jar"]
+
+EXPOSE 8080
